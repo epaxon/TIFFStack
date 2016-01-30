@@ -292,8 +292,6 @@ classdef TIFFStack < handle
         
         % connect - open and connect to the tiff
         function oStack = connect(oStack)
-            disp('TIFFStack:connect');
-            
             if (oStack.bUseTiffLib)
                 % - Create a Tiff object
                 oStack.TIF = tifflib('open', oStack.strFilename, 'r');
